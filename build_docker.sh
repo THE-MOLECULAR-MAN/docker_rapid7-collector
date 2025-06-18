@@ -44,7 +44,7 @@ log "Finished removing old containers and images."
 # build the image
 set -e
 log "Starting to build the docker image..."
-docker build -t "$DOCKER_REPO_NAME" .
+docker build --platform=linux/amd64 -t "$DOCKER_REPO_NAME" .
 log "Successfully finished building the docker image"
 
 # start the image as new container
